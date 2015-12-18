@@ -1,8 +1,12 @@
 package day2;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import reindeer.Reindeer;
@@ -19,38 +23,19 @@ public class ElvesBoxes {
      * @throws IOException 
      */
     public int wrap(String path) throws IOException {
-        FileReader inputStream = null;
-        try {
-            inputStream = new FileReader(path);
-            int c;
-
-            int floorNumber = 0;
-            char symbol;
-            while ((c = inputStream.read()) != -1) {
-                symbol = (char) c;
-                switch (symbol) {
-                    case '(':
-                        floorNumber++;
-                        break;
-                    case ')':
-                        floorNumber--;
-                        break;
-                    default:
-                        System.out.println("Unknown symbol " + symbol + " is encountered");
-                }
-            }
-            return floorNumber;
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Reindeer.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Reindeer.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            if (inputStream != null) {
-                inputStream.close();
-            }
-        }
-        return -1;
+        File fin = new File(path);
+        FileInputStream fis = new FileInputStream(fin);
+ 	BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+ 
+	String line = null;
+        int[] edges = new int[3];
+        int total = 0;
+	while ((line = br.readLine()) != null) {
+            edges = getEdges(line);
+            total += wrapBox(edges[0], edges[1], edges[2]);
+	}
+ 	br.close();
+        return total;
 
     }
     
@@ -77,6 +62,11 @@ public class ElvesBoxes {
         s += sTmp;
         return 2*s + min;
     
+    }
+
+    private int[] getEdges(String line) {
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
