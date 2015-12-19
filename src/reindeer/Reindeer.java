@@ -28,7 +28,7 @@ public class Reindeer {
 //        System.out.println(grid.traceDouble("directions.txt"));
         Mining m = new Mining(10000000L);
         
-        System.out.println(m.trace("ckczppom"));        
+        System.out.println(m.trace("ckczppom", "000000"));        
         
     }
     
