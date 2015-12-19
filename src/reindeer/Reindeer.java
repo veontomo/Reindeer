@@ -5,6 +5,7 @@ package reindeer;
 
 import day1.SantaFloors;
 import day2.ElvesBoxes;
+import day3.Grid;
 import java.io.IOException;
 
 /**
@@ -20,9 +21,10 @@ public class Reindeer {
 //        SantaFloors sf = new SantaFloors();
 //        System.out.println(sf.maxFloor("input.txt"));
 //        System.out.println(sf.getToFloor("input.txt", -1));
-        ElvesBoxes boxes = new ElvesBoxes();
+        //ElvesBoxes boxes = new ElvesBoxes();
         //System.out.println(boxes.wrap("boxes.txt"));
-        System.out.println(boxes.ribbon("boxes.txt"));
+        Grid grid = new Grid();
+        System.out.println(grid.traceDouble("directions.txt"));
         
     }
     
