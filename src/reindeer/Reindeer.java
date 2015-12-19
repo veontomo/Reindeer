@@ -6,6 +6,7 @@ package reindeer;
 import day1.SantaFloors;
 import day2.ElvesBoxes;
 import day3.Grid;
+import day4.Mining;
 import java.io.IOException;
 
 /**
@@ -23,8 +24,11 @@ public class Reindeer {
 //        System.out.println(sf.getToFloor("input.txt", -1));
         //ElvesBoxes boxes = new ElvesBoxes();
         //System.out.println(boxes.wrap("boxes.txt"));
-        Grid grid = new Grid();
-        System.out.println(grid.traceDouble("directions.txt"));
+//        Grid grid = new Grid();
+//        System.out.println(grid.traceDouble("directions.txt"));
+        Mining m = new Mining(10000000L);
+        
+        System.out.println(m.trace("ckczppom"));        
         
     }
     
