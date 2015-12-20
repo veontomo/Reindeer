@@ -7,6 +7,7 @@ import day1.SantaFloors;
 import day2.ElvesBoxes;
 import day3.Grid;
 import day4.Mining;
+import day5.StringAnalyzer;
 import java.io.IOException;
 
 /**
@@ -26,9 +27,10 @@ public class Reindeer {
         //System.out.println(boxes.wrap("boxes.txt"));
 //        Grid grid = new Grid();
 //        System.out.println(grid.traceDouble("directions.txt"));
-        Mining m = new Mining(10000000L);
-        
-        System.out.println(m.trace("ckczppom", "000000"));        
+//        Mining m = new Mining(10000000L);        
+//        System.out.println(m.trace("ckczppom", "000000"));        
+        StringAnalyzer analyzer = new StringAnalyzer();
+        System.out.println(analyzer.niceCount("niceWords.txt"));        
         
     }
     
