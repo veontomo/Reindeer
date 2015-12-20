@@ -12,16 +12,19 @@ import junit.framework.TestCase;
  * @author Andrea
  */
 public class StringAnalyzerTest extends TestCase {
-    
+
+    private StringAnalyzer instance;
+
     public StringAnalyzerTest(String testName) {
         super(testName);
     }
-    
+
     @Override
     protected void setUp() throws Exception {
         super.setUp();
+        instance = new StringAnalyzer();
     }
-    
+
     @Override
     protected void tearDown() throws Exception {
         super.tearDown();
@@ -31,81 +34,87 @@ public class StringAnalyzerTest extends TestCase {
      * Test of containsForbidden method, of class StringAnalyzer.
      */
     public void testContainsForbiddenNoForbidden() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsForbidden("sss");
         assertFalse(result);
     }
-    
+
     /**
      * Test of containsForbidden method, of class StringAnalyzer.
      */
     public void testContainsForbiddenContains_ab() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsForbidden("jhuuabjdhd");
         assertTrue(result);
     }
-    
+
     public void testContainsDoubleNoDouble() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsDouble("abcd");
         assertFalse(result);
     }
-    
+
     public void testContainsDoubleAtStart() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsDouble("bbcd");
         assertTrue(result);
     }
 
     public void testContainsDoubleAtMiddle() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsDouble("abccd");
         assertTrue(result);
     }
 
     public void testContainsDoubleAtEnd() {
-        StringAnalyzer instance = new StringAnalyzer();
         boolean result = instance.containsDouble("abcdd");
         assertTrue(result);
     }
-    
-    public void testNumberOfVowelsNoVowels(){
-        StringAnalyzer instance = new StringAnalyzer();
+
+    public void testNumberOfVowelsNoVowels() {
         int result = instance.numberOfVowels("qwrt");
         assertEquals(result, 0);
     }
-    
-    public void testNumberOfVowelsOneStart(){
-        StringAnalyzer instance = new StringAnalyzer();
+
+    public void testNumberOfVowelsOneStart() {
         int result = instance.numberOfVowels("aqwrt");
         assertEquals(result, 1);
     }
 
-    public void testNumberOfVowelsOneMiddle(){
-        StringAnalyzer instance = new StringAnalyzer();
+    public void testNumberOfVowelsOneMiddle() {
         int result = instance.numberOfVowels("qwurt");
         assertEquals(result, 1);
     }
-    
-    public void testNumberOfVowelsOneEnd(){
-        StringAnalyzer instance = new StringAnalyzer();
+
+    public void testNumberOfVowelsOneEnd() {
         int result = instance.numberOfVowels("qwrti");
         assertEquals(result, 1);
     }
-    
-    public void testNumberOfVowelsTwoStart(){
-        StringAnalyzer instance = new StringAnalyzer();
+
+    public void testNumberOfVowelsTwoStart() {
         int result = instance.numberOfVowels("aqbuwrt");
         assertEquals(result, 2);
     }
-    
-    
-    public void testNumberOfVowelsONlyVowels(){
-        StringAnalyzer instance = new StringAnalyzer();
+
+    public void testNumberOfVowelsONlyVowels() {
         int result = instance.numberOfVowels("auioe");
         assertEquals(result, 5);
     }
 
+    public void testIsNiceTrue() {
+        assertTrue(instance.isNice("ugknbfddgicrmopn"));
+    }
+
+    public void testIsNiceTrue2() {
+        assertTrue(instance.isNice("aaa"));
+    }
     
+    public void testIsNiceFalse() {
+        assertFalse(instance.isNice("jchzalrnumimnmhp"));
+    }
     
+    public void testIsNiceFalse2() {
+        assertFalse(instance.isNice("haegwjzuvuyypxyu"));
+    }
+    
+    public void testIsNiceFalse3() {
+        assertFalse(instance.isNice("dvszwmarrgswjxmb"));
+    }
+    
+
 }

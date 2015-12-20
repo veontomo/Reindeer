@@ -13,41 +13,65 @@ import reindeer.Reindeer;
 
 /**
  * Elves and their boxes
+ *
  * @author Andrea
  */
 public class ElvesBoxes {
-    
+
     /**
      * Calculates area required for wrapping all boxes
+     *
      * @return
-     * @throws IOException 
+     * @throws IOException
      */
     public int wrap(String path) throws IOException {
         File fin = new File(path);
         FileInputStream fis = new FileInputStream(fin);
- 	BufferedReader br = new BufferedReader(new InputStreamReader(fis));
- 
-	String line = null;
-        int[] edges = new int[3];
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+        String line;
+        int[] edges;
         int total = 0;
-	while ((line = br.readLine()) != null) {
+        while ((line = br.readLine()) != null) {
             edges = getEdges(line);
             total += wrapBox(edges[0], edges[1], edges[2]);
-	}
- 	br.close();
+        }
+        br.close();
         return total;
-
     }
     
     /**
-     * Calculates how much paper is needed in order to wrap a box with given 
+     * Calculates ribbon length required for wrapping all boxes
+     *
+     * @return
+     * @throws IOException
+     */
+    public int ribbon(String path) throws IOException {
+        File fin = new File(path);
+        FileInputStream fis = new FileInputStream(fin);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+        String line;
+        int[] edges;
+        int total = 0;
+        while ((line = br.readLine()) != null) {
+            edges = getEdges(line);
+            total += ribbonBox(edges[0], edges[1], edges[2]);
+        }
+        br.close();
+        return total;
+    }
+
+    /**
+     * Calculates how much paper is needed in order to wrap a box with given
      * edge length.
+     *
      * @param x
      * @param y
      * @param z
-     * @return 
+     * @return
      */
-    private int wrapBox(int x, int y, int z){
+    private int wrapBox(int x, int y, int z) {
         int s = x * y;
         int min = s;
         int sTmp = x * z;
@@ -56,17 +80,38 @@ public class ElvesBoxes {
         }
         s += sTmp;
         sTmp = y * z;
-        if (sTmp < min){
+        if (sTmp < min) {
             min = sTmp;
         }
         s += sTmp;
-        return 2*s + min;
+        return 2 * s + min;
+
+    }
     
+    
+    public int ribbonBox(int x, int y, int z){
+        int maxEdge = x > y ? x : y;
+        if (maxEdge < z) {
+            maxEdge = z;
+        }
+        return 2*(x + y + z - maxEdge) + x*y*z;
+            
+        
     }
 
     private int[] getEdges(String line) {
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int[] edges = new int[3];
+        String[] edgeStr = line.split("x");
+        if (edgeStr.length == 3) {
+            edges[0] = Integer.parseInt(edgeStr[0]);
+            edges[1] = Integer.parseInt(edgeStr[1]);
+            edges[2] = Integer.parseInt(edgeStr[2]);
+        } else {
+            System.out.println("line " + line + " does not contain 3 elements");
+        }
+
+        return edges;
+
     }
-    
+
 }

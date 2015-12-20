@@ -5,6 +5,11 @@
  */
 package day5;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,6 +53,22 @@ public class StringAnalyzer {
 
     public boolean isNice(String key) {
         return !containsForbidden(key) && containsDouble(key) && (numberOfVowels(key) > 2);
+    }
+
+    public int niceCount(String fileName) throws IOException  {
+        File fin = new File(fileName);
+        FileInputStream fis = new FileInputStream(fin);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+
+        String line;
+        int total = 0;
+        while ((line = br.readLine()) != null) {
+            if(isNice(line)){
+                total++;
+            }
+        }
+        br.close();
+        return total;
     }
 
 }
