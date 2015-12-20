@@ -31,4 +31,24 @@ public class StringAnalyzer {
         return m.find();
     }
 
+    public int numberOfVowels(String key) {
+        int total = 0;
+        int keyLength = key.length();
+        String[] vowels = new String[]{"a", "o", "e", "i", "u"};
+        for (String vowel : vowels) {
+            int index = key.indexOf(vowel);
+            while (index >= 0 && index < keyLength) {
+                index = key.indexOf(vowel, index + 1);
+                total++;
+            }
+        }
+        return total;
+
+    }
+    
+    public boolean isNice(String key){
+        return false;
+    
+    }
+
 }
