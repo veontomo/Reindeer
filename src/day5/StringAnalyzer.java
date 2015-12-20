@@ -45,10 +45,9 @@ public class StringAnalyzer {
         return total;
 
     }
-    
-    public boolean isNice(String key){
-        return false;
-    
+
+    public boolean isNice(String key) {
+        return !containsForbidden(key) && containsDouble(key) && (numberOfVowels(key) > 2);
     }
 
 }
