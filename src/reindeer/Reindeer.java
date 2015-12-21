@@ -33,7 +33,7 @@ public class Reindeer {
 //        StringAnalyzer analyzer = new StringAnalyzer();
 //        System.out.println(analyzer.niceCountModified("niceWords.txt"));        
         
-        Lights lights = new Lights();
+        Lights lights = new Lights(1000, 1000);
         lights.executeFile("light_commands.txt");
         System.out.println("The number of lights turned on: " + lights.size());
         
