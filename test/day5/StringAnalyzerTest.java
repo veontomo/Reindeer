@@ -123,21 +123,38 @@ public class StringAnalyzerTest extends TestCase {
     public void testContainsPair2() {
         assertTrue(instance.containsPair("aabcdefgaa"));
     }
-    
+
     public void testContainsPair3() {
         assertFalse(instance.containsPair("aaa"));
     }
-    
+
     public void testContainsSandwich1() {
-        assertTrue(instance.containsSandich("xyx"));
+        assertTrue(instance.containsSandwich("xyx"));
     }
 
     public void testContainsSandwich2() {
-        assertTrue(instance.containsSandich("abcdefeghi"));
+        assertTrue(instance.containsSandwich("abcdefeghi"));
+    }
+
+    public void testContainsSandwich3() {
+        assertTrue(instance.containsSandwich("aaa"));
+    }
+
+    public void testIsNiceModified1() {
+        assertTrue(instance.isNiceModified("qjhvhtzxzqqjkmpb"));
+    }
+
+    public void testIsNiceModified2() {
+        assertTrue(instance.isNiceModified("xxyxx"));
+    }
+
+    public void testIsNiceModified3() {
+        assertFalse(instance.isNiceModified("uurcxstgmygtbstg"));
     }
     
-    public void testContainsSandwich3() {
-        assertTrue(instance.containsSandich("aaa"));
+
+    public void testIsNiceModified4() {
+        assertFalse(instance.isNiceModified("ieodomkazucvgmuy"));
     }
 
 }
