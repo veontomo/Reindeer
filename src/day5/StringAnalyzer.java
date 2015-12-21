@@ -70,5 +70,21 @@ public class StringAnalyzer {
         br.close();
         return total;
     }
+    
+    public boolean containsPair(String key){
+        Pattern p = Pattern.compile("([a-z]{2})[a-z]*?\\1");
+        Matcher m = p.matcher(key);
+        return m.find();
+    }
+    
+    public boolean containsSandich(String key){
+        Pattern p = Pattern.compile("([a-z])[a-z]\\1");
+        Matcher m = p.matcher(key);
+        return m.find();
+    }
+    
+    public boolean isNiceModified(String key){
+        return false;
+    }
 
 }
