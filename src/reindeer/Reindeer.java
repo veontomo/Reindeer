@@ -8,6 +8,7 @@ import day2.ElvesBoxes;
 import day3.Grid;
 import day4.Mining;
 import day5.StringAnalyzer;
+import day6.Lights;
 import java.io.IOException;
 
 /**
@@ -29,8 +30,13 @@ public class Reindeer {
 //        System.out.println(grid.traceDouble("directions.txt"));
 //        Mining m = new Mining(10000000L);        
 //        System.out.println(m.trace("ckczppom", "000000"));        
-        StringAnalyzer analyzer = new StringAnalyzer();
-        System.out.println(analyzer.niceCount("niceWords.txt"));        
+//        StringAnalyzer analyzer = new StringAnalyzer();
+//        System.out.println(analyzer.niceCountModified("niceWords.txt"));        
+        
+        Lights lights = new Lights();
+        lights.executeFile("light_commands.txt");
+        System.out.println("The number of lights turned on: " + lights.size());
+        
         
     }
     

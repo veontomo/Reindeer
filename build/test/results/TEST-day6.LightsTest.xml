@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="AndreaS8" name="day5.StringAnalyzerTest" skipped="0" tests="27" time="0.115" timestamp="2015-12-21T11:45:10">
+<testsuite errors="0" failures="1" hostname="AndreaS8" name="day6.LightsTest" skipped="0" tests="23" time="11.862" timestamp="2015-12-21T11:45:10">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="IT" />
@@ -57,7 +57,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner day5.StringAnalyzerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Andrea\git\Reindeer\build\test\results\TEST-day5.StringAnalyzerTest.xml crashfile=C:\Users\Andrea\git\Reindeer\build\junitvmwatcher6332804482348183526.properties propsfile=C:\Users\Andrea\git\Reindeer\build\junit4595848118560198910.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner day6.LightsTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Andrea\git\Reindeer\build\test\results\TEST-day6.LightsTest.xml crashfile=C:\Users\Andrea\git\Reindeer\build\junitvmwatcher1577618568961342044.properties propsfile=C:\Users\Andrea\git\Reindeer\build\junit8395494094999208732.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -397,33 +397,33 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsNoVowels" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsForbiddenContains_ab" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleNoDouble" time="0.002" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtMiddle" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtEnd" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsForbiddenNoForbidden" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtStart" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair3" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsONlyVowels" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified2" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified4" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified1" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneMiddle" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich3" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneEnd" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified3" time="0.002" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair2" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair1" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsTwoStart" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich1" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneStart" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich2" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse2" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse3" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceTrue" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceTrue2" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnBlockOnVerLine" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testTurnBlockOffSingle" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testParseOperationTurnOff" time="0.002" />
+  <testcase classname="day6.LightsTest" name="testParseOperationTurnOn" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testToggleSingleOff" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnBlockOnSingle" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnBlockOnHorLine" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testTurnBlockOnSquare2x2" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testToggleSingleOn" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testExecuteTurnOn" time="0.917" />
+  <testcase classname="day6.LightsTest" name="testParseCoordinatesTurnOn" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testParseCoordinatesTurnOff" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testExecuteTurnOff" time="0.343" />
+  <testcase classname="day6.LightsTest" name="testExecuteToggle" time="10.514">
+    <failure message="expected:&lt;30200&gt; but was:&lt;30201&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;30200&gt; but was:&lt;30201&gt;
+	at day6.LightsTest.testExecuteToggle(LightsTest.java:208)
+</failure>
+  </testcase>
+  <testcase classname="day6.LightsTest" name="testParseOperationToggle" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testParseCoordinatesToggle" time="0.001" />
+  <testcase classname="day6.LightsTest" name="testTurnOnTwice" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnOffOnce" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnOnOnce" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testSize_0" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testSize_1" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testTurnOffTwice" time="0.0" />
+  <testcase classname="day6.LightsTest" name="testSize_5" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

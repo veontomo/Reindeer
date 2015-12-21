@@ -159,7 +159,54 @@ public class LightsTest extends TestCase {
         assertEquals("toggle", op);
 
     }
-    
-    
+
+    public void testParseCoordinatesTurnOn() {
+        int[] coords = lights.parseCoordinates("turn on 296,561 through 530,856");
+        assertEquals(4, coords.length);
+        assertEquals(296, coords[0]);
+        assertEquals(561, coords[1]);
+        assertEquals(530, coords[2]);
+        assertEquals(856, coords[3]);
+    }
+
+    public void testParseCoordinatesTurnOff() {
+        int[] coords = lights.parseCoordinates("turn off 1, 2 through 3,4");
+        assertEquals(4, coords.length);
+        assertEquals(1, coords[0]);
+        assertEquals(2, coords[1]);
+        assertEquals(3, coords[2]);
+        assertEquals(4, coords[3]);
+
+    }
+
+    public void testParseCoordinatesToggle() {
+        int[] coords = lights.parseCoordinates("turn off 10,11 through 12,13");
+        assertEquals(4, coords.length);
+        assertEquals(10, coords[0]);
+        assertEquals(11, coords[1]);
+        assertEquals(12, coords[2]);
+        assertEquals(13, coords[3]);
+
+    }
+
+    public void testExecuteTurnOn() throws Exception {
+        lights.execute("turn on 199,133 through 461,193");
+        assertEquals(lights.size(), (461 - 198) * (193 - 132));
+
+    }
+
+    public void testExecuteTurnOff() throws Exception {
+        lights.execute("turn on 100,100 through 200,200");
+        lights.execute("turn off 120,120 through 150,150");
+        assertEquals(lights.size(), 101 * 101 - 31 * 31);
+
+    }
+
+    public void testExecuteToggle() throws Exception {
+        lights.execute("turn on 100,100 through 200,200");
+        lights.execute("toggle 50,50 through 250,250");
+        assertEquals(lights.size(), 201*201 - 101 * 101);
+
+    }
 
 }
