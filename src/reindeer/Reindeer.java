@@ -9,6 +9,7 @@ import day3.Grid;
 import day4.Mining;
 import day5.StringAnalyzer;
 import day6.Lights;
+import day6.LightsAnalog;
 import java.io.IOException;
 
 /**
@@ -33,9 +34,10 @@ public class Reindeer {
 //        StringAnalyzer analyzer = new StringAnalyzer();
 //        System.out.println(analyzer.niceCountModified("niceWords.txt"));        
         
-        Lights lights = new Lights(1000, 1000);
+        LightsAnalog lights = new LightsAnalog(1000, 1000);
         lights.executeFile("light_commands.txt");
         System.out.println("The number of lights turned on: " + lights.size());
+        System.out.println("The total brightness: " + lights.brightness());
         
         
     }

@@ -18,24 +18,20 @@ import java.util.regex.Pattern;
  *
  * @author Andrea
  */
-public class Lights {
+public class LightsAnalog {
 
     /**
      * list of lights that are turned on
      */
-    private final byte[][] lightsOn;
-    
-    private final static byte LIGHT_ON = 1;
-
-    private final static byte LIGHT_OFF = 0;
+    private final int[][] lightsOn;
 
     private final int X_MAX;
     private final int Y_MAX;
 
-    public Lights(int x, int y) {
+    public LightsAnalog(int x, int y) {
         X_MAX = x;
         Y_MAX = y;
-        lightsOn = new byte[x][y];
+        lightsOn = new int[x][y];
     }
 
     /**
@@ -111,16 +107,6 @@ public class Lights {
      * @param y
      */
     public void turnOn(int x, int y) {
-        lightsOn[x][y] = LIGHT_ON;
-    }
-    
-    /**
-     * Increase brightnessof a light with given coordinates
-     *
-     * @param x
-     * @param y
-     */
-    public void turnOnAnalog(int x, int y) {
         lightsOn[x][y]++;
     }
 
@@ -131,11 +117,7 @@ public class Lights {
      * @param y
      */
     public void toggle(int x, int y) {
-        if (isOn(x, y)) {
-            turnOff(x, y);
-        } else {
-            turnOn(x, y);
-        }
+        lightsOn[x][y] += 2;
     }
 
     /**
@@ -145,7 +127,9 @@ public class Lights {
      * @param y
      */
     public void turnOff(int x, int y) {
-        lightsOn[x][y] = LIGHT_OFF;
+        if (lightsOn[x][y] > 0) {
+            lightsOn[x][y]--;
+        }
     }
 
     /**
@@ -156,19 +140,32 @@ public class Lights {
      * @return
      */
     public boolean isOn(int x, int y) {
-        return lightsOn[x][y] == LIGHT_ON;
+        return lightsOn[x][y] > 0;
     }
-
 
     public int size() {
         int counter = 0;
         for (int x = 0; x < X_MAX; x++) {
             for (int y = 0; y < Y_MAX; y++) {
-                if (lightsOn[x][y] == LIGHT_ON){
+                if (lightsOn[x][y] > 0) {
                     counter++;
                 }
             }
 
+        }
+        return counter;
+    }
+
+    /**
+     * Total brightness
+     * @return 
+     */
+    public int brightness() {
+        int counter = 0;
+        for (int x = 0; x < X_MAX; x++) {
+            for (int y = 0; y < Y_MAX; y++) {
+                counter += lightsOn[x][y];
+            }
         }
         return counter;
     }

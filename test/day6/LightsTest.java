@@ -17,7 +17,7 @@ public class LightsTest extends TestCase {
 
     public LightsTest(String testName) {
         super(testName);
-        lights = new Lights();
+        lights = new Lights(1000, 1000);
     }
 
     @Override
