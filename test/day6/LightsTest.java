@@ -143,4 +143,23 @@ public class LightsTest extends TestCase {
         assertEquals(0, lights.size());
     }
 
+    public void testParseOperationTurnOn() {
+        String op = lights.parseOperation("turn on 711,334 through 799,515");
+        assertEquals("turn on", op);
+    }
+
+    public void testParseOperationTurnOff() {
+        String op = lights.parseOperation("turn off 306,448 through 602,924");
+        assertEquals("turn off", op);
+
+    }
+
+    public void testParseOperationToggle() {
+        String op = lights.parseOperation("toggle 880,98 through 932,434");
+        assertEquals("toggle", op);
+
+    }
+    
+    
+
 }
