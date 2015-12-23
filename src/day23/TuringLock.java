@@ -128,8 +128,7 @@ public class TuringLock {
      * @return 
      */
     public String[] splitInstruction(String instruction) {
-        // TODO: stub
-        return null;
+        return instruction.split(",?\\s");
     }
 
 }

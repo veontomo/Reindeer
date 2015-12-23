@@ -72,7 +72,7 @@ public class TuringLockTest extends TestCase {
         assertEquals(result.length, 3);
         assertEquals(result[0], "jio");
         assertEquals(result[1], "b");
-        assertEquals(result[1], "-1");
+        assertEquals(result[2], "-1");
     }
 
     public void testParseInstructionJioPlus() {
@@ -80,7 +80,7 @@ public class TuringLockTest extends TestCase {
         assertEquals(result.length, 3);
         assertEquals(result[0], "jio");
         assertEquals(result[1], "ee");
-        assertEquals(result[1], "+5");
+        assertEquals(result[2], "+5");
     }
 
     public void testParseInstructionJieMinus() {
@@ -88,7 +88,7 @@ public class TuringLockTest extends TestCase {
         assertEquals(result.length, 3);
         assertEquals(result[0], "jie");
         assertEquals(result[1], "v");
-        assertEquals(result[1], "-10");
+        assertEquals(result[2], "-10");
     }
 
     public void testParseInstructionJiePlus() {
@@ -96,7 +96,7 @@ public class TuringLockTest extends TestCase {
         assertEquals(result.length, 3);
         assertEquals(result[0], "jie");
         assertEquals(result[1], "z");
-        assertEquals(result[1], "+0");
+        assertEquals(result[2], "+0");
     }
 
 }
