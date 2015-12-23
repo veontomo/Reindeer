@@ -76,6 +76,7 @@ public class Reindeer {
             lines.close();
             TuringLock turing = new TuringLock(new String[]{"a", "b"});
             turing.loadInstructions(instructions);
+            turing.setRegisterValues(new int[]{1, 0});
             turing.start();
             System.out.println(turing.getRegisterValue("a"));
             System.out.println(turing.getRegisterValue("b"));
