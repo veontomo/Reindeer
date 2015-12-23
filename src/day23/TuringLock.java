@@ -1,21 +1,10 @@
 package day23;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Stream;
 
 /**
  *
@@ -51,6 +40,7 @@ public class TuringLock {
             }
         } catch (Exception ex) {
             System.out.println("Failed to execute instruction #" + currentInstrNum + ": " + ex.getMessage());
+            Logger.getLogger(TuringLock.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("No more instructions");
 
@@ -70,7 +60,7 @@ public class TuringLock {
                 tpl(registerMap.get(instrParsed[1]));
                 break;
             case "jmp":
-                hlf(registerMap.get(instrParsed[1]));
+                jmp(strToInt(instrParsed[1]));
                 break;
             case "jio":
                 jio(registerMap.get(instrParsed[1]), strToInt(instrParsed[2]));
@@ -139,7 +129,7 @@ public class TuringLock {
     }
 
     /**
-     * Jumps if the value of given register is even
+     * Jumps if the value of given register is equal to 1
      *
      * @param registerNum
      * @param offset
@@ -170,6 +160,10 @@ public class TuringLock {
         for (int i = 0; i < size; i++) {
             registerMap.put(registerNames[i], i);
         }
+
+        registerMap.keySet().stream().forEach((reg) -> {
+            System.out.println("key = " + reg + ", value = " + registerMap.get(reg));
+        });
     }
 
     /**
@@ -182,22 +176,22 @@ public class TuringLock {
         return registerValues[registerMap.get(r)];
     }
 
-    
     /**
-     * Converts string with plus or minus prefix into a positive or negative integer
+     * Converts string with plus or minus prefix into a positive or negative
+     * integer
+     *
      * @param str
-     * @return 
+     * @return
      */
-    public int strToInt(String str) throws Exception{
+    public int strToInt(String str) throws Exception {
         Pattern p = Pattern.compile("(\\+|\\-)(\\d+)");
         Matcher m = p.matcher(str);
-        if (!m.find()){
+        if (!m.find()) {
             throw new Exception("Failed to convert string " + str + " into integer.");
-            
+
         }
-        int res = (m.group(1).equals("+") ? 1 : -1) *  Integer.parseInt(m.group(2));
+        int res = (m.group(1).equals("+") ? 1 : -1) * Integer.parseInt(m.group(2));
         return res;
-        
-    
+
     }
 }
