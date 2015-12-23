@@ -24,7 +24,7 @@ public class TuringLockTest extends TestCase {
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        t = new TuringLock(2);
+        t = new TuringLock(new String[]{"a", "b"});
     }
 
     @Override
@@ -97,6 +97,38 @@ public class TuringLockTest extends TestCase {
         assertEquals(result[0], "jie");
         assertEquals(result[1], "z");
         assertEquals(result[2], "+0");
+    }
+
+    public void testStart1() {
+        String[] instructions = new String[]{"inc a", "jio a, +2", "tpl a", "inc a"};
+        t.loadInstructions(instructions);
+        t.start();
+        assertEquals(t.getRegisterValue("a"), 2);
+        assertEquals(t.getRegisterValue("b"), 0);
+    }
+
+    public void testStart2() {
+        String[] instructions = new String[]{"inc a", "jio a, -2", "tpl a", "inc a"};
+        t.loadInstructions(instructions);
+        t.start();
+        assertEquals(t.getRegisterValue("a"), 1);
+        assertEquals(t.getRegisterValue("b"), 0);
+    }
+
+    public void testStrToIntZeroPlus() throws Exception {
+        assertEquals(t.strToInt("+0"), 0);
+    }
+
+    public void testStrToIntZeroMinus() throws Exception {
+        assertEquals(t.strToInt("-0"), 0);
+    }
+
+    public void testStrToInt12Plus() throws Exception {
+        assertEquals(t.strToInt("+12"), 12);
+    }
+
+    public void testStrToInt176Minus() throws Exception {
+        assertEquals(t.strToInt("-176"), -176);
     }
 
 }

@@ -14,6 +14,11 @@ import day6.Lights;
 import day6.LightsAnalog;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Stream;
 
 /**
  *
@@ -65,10 +70,19 @@ public class Reindeer {
 //            System.out.println(String.valueOf(i) + ": "+ deers[i].totalDistance(time));
 //        }
 //        System.out.println("Max distance: "+ max_dist);
-        
-        
-        TuringLock turing = new TuringLock(2);
-        turing.loadInstructions(new File("instructions.txt"));
+        try {
+            Stream<String> lines = Files.lines(Paths.get("instructions.txt"));
+            String[] instructions = lines.toArray(String[]::new);
+            lines.close();
+            TuringLock turing = new TuringLock(new String[]{"a", "b"});
+            turing.loadInstructions(instructions);
+            turing.start();
+            System.out.println(turing.getRegisterValue("a"));
+            System.out.println(turing.getRegisterValue("b"));
+
+        } catch (IOException ex) {
+            Logger.getLogger(TuringLock.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 

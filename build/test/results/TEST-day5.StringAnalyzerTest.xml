@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="AndreaS8" name="day5.StringAnalyzerTest" skipped="0" tests="27" time="0.084" timestamp="2015-12-23T13:30:00">
+<testsuite errors="0" failures="0" hostname="AndreaS8" name="day5.StringAnalyzerTest" skipped="0" tests="27" time="0.136" timestamp="2015-12-23T15:40:01">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="IT" />
@@ -57,7 +57,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner day5.StringAnalyzerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Andrea\git\Reindeer\build\test\results\TEST-day5.StringAnalyzerTest.xml crashfile=C:\Users\Andrea\git\Reindeer\build\junitvmwatcher3421465649905901542.properties propsfile=C:\Users\Andrea\git\Reindeer\build\junit1105817827172353592.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner day5.StringAnalyzerTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Andrea\git\Reindeer\build\test\results\TEST-day5.StringAnalyzerTest.xml crashfile=C:\Users\Andrea\git\Reindeer\build\junitvmwatcher3068004770613158008.properties propsfile=C:\Users\Andrea\git\Reindeer\build\junit1727364881480972245.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -109,6 +109,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Users\Andrea\AppData\Roaming\NetBeans\8.0\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.0\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="ant.home" value="C:\Users\Andrea\AppData\Roaming\NetBeans\8.0\ant" />
     <property name="libs.junit_4.src" value="C:\Program Files\NetBeans 8.0\java\docs\junit-4.10-sources.jar" />
     <property name="libs.testng.classpath" value="C:\Users\Andrea\AppData\Roaming\NetBeans\8.0\modules\ext\testng-6.8.1-dist.jar" />
@@ -239,7 +240,6 @@
     <property name="libs.DataBindingME-SVG.src" value="C:\Program Files\NetBeans 8.0\mobility\sources\netbeans_databindingme_svg-src.zip" />
     <property name="dist.jar" value="dist/Reindeer.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
-    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="Reindeer" />
     <property name="netbeans.hash.code" value="unique=NB_CND_EXTIDE_GFMOD_GROOVY_JAVA_JC_MOB_PHP_WEBCOMMON_WEBEE065d84ab8-dc5b-4672-9250-3350079fb2b0_bc80cb76-1127-4df8-961a-a36252298001" />
@@ -398,33 +398,33 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceTrue2" time="0.004" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse3" time="0.004" />
   <testcase classname="day5.StringAnalyzerTest" name="testIsNiceTrue" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse2" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse3" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneStart" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceTrue2" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceFalse2" time="0.001" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsForbiddenNoForbidden" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleNoDouble" time="0.001" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleNoDouble" time="0.0" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtStart" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtMiddle" time="0.0" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsForbiddenContains_ab" time="0.0" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtEnd" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsDoubleAtMiddle" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsNoVowels" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsNoVowels" time="0.001" />
+  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneStart" time="0.0" />
   <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneEnd" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsTwoStart" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified1" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich3" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified3" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneMiddle" time="0.003" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsPair1" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsONlyVowels" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich1" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified2" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair2" time="0.001" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich1" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsONlyVowels" time="0.002" />
+  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsTwoStart" time="0.001" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified1" time="0.001" />
   <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich2" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified3" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair2" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testNumberOfVowelsOneMiddle" time="0.0" />
-  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair3" time="0.001" />
-  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified4" time="0.001" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsPair3" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified2" time="0.0" />
+  <testcase classname="day5.StringAnalyzerTest" name="testIsNiceModified4" time="0.002" />
+  <testcase classname="day5.StringAnalyzerTest" name="testContainsSandwich3" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
