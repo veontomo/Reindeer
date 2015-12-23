@@ -98,6 +98,14 @@ public class TuringLockTest extends TestCase {
         assertEquals(result[1], "z");
         assertEquals(result[2], "+0");
     }
+    
+    public void testParseInstructionJmpPlus2() {
+        String[] result = t.splitInstruction("jmp +23");
+        assertEquals(result.length, 2);
+        assertEquals(result[0], "jmp");
+        assertEquals(result[1], "+23");
+
+    }
 
     public void testStart1() {
         String[] instructions = new String[]{"inc a", "jio a, +2", "tpl a", "inc a"};
