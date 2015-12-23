@@ -19,16 +19,24 @@ public class Deer {
         this.speed = speed;
         this.activeTime = activeTime;
         this.passiveTime = passiveTime;
-        this.fullPeriod = activeTime + passiveTime;
+        this.fullPeriod = this.activeTime + this.passiveTime;
     }
     
     public int fullCycles(int time){
         return (int) (time/fullPeriod);
     }
     
-    public int totalDistance(int time){
+    /**
+     * Returns a distance at which a deer arrives during given time if it 
+     * starts from starting distance d0.
+     * @param time
+     * @param d0
+     * @return 
+     */
+    public int totalDistance(int time, int d0, int t0){
+        // TODO: take into consideration start time t0
         int completeCycles = fullCycles(time);
-        int distance = completeCycles * speed * activeTime;
+        int distance = d0 + completeCycles * speed * activeTime;
         int incompleteCycleTime = time - completeCycles * fullPeriod;
         if (incompleteCycleTime > activeTime) {
             distance += activeTime * speed;
